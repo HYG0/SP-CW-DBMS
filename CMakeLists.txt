@@ -30,12 +30,12 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(jwt-cpp Crow)
 
-add_library(dbms_b_star_plus_tree INTERFACE)
-target_include_directories(dbms_b_star_plus_tree
+add_library(dbms_b_plus_tree INTERFACE)
+target_include_directories(dbms_b_plus_tree
         INTERFACE
         include
         include/core/trees)
-target_link_libraries(dbms_b_star_plus_tree
+target_link_libraries(dbms_b_plus_tree
         INTERFACE
         Boost::container)
 
@@ -95,7 +95,7 @@ if (FLEX_INCLUDE_DIRS)
 endif ()
 
 set(CORE_LIBS
-        dbms_b_star_plus_tree
+        dbms_b_plus_tree
         Boost::container
         nlohmann_json::nlohmann_json
         jwt-cpp::jwt-cpp
