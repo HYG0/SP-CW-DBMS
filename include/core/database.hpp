@@ -32,6 +32,6 @@ private:
     std::filesystem::path index_path_;
     std::filesystem::path table_indexes_dir_;
 
-    BSP_tree<std::string, std::size_t> tables_;
+    BPlus_tree<std::string, std::size_t> tables_;
     std::vector<std::unique_ptr<Table> > table_storage_;
 };

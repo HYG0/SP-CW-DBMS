@@ -1,6 +1,6 @@
 #include "core/table.hpp"
 #include "core/schema.hpp"
-#include "core/trees/b_star_plus_tree.hpp"
+#include "core/tree/b_plus_tree.hpp"
 #include <chrono>
 #include <filesystem>
 #include <ranges>
@@ -11,7 +11,7 @@
 
 struct Index {
     std::size_t col_index;
-    BSP_tree<Value, RowID, ValueComparator> tree;
+    BPlus_tree<Value, RowID, ValueComparator> tree;
 
     Index(const std::size_t col_index, const std::filesystem::path &path) : col_index(col_index), tree(path) {
     }

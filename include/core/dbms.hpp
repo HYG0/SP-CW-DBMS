@@ -34,7 +34,7 @@ private:
 
     std::filesystem::path index_path_;
     std::filesystem::path database_indexes_dir_;
-    BSP_tree<std::string, std::size_t> databases_;
+    BPlus_tree<std::string, std::size_t> databases_;
     std::vector<std::unique_ptr<Database> > database_storage_;
 
     Database *current_db_ = nullptr;
