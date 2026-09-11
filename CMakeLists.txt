@@ -36,6 +36,8 @@ set(CORE_SOURCES
         src/storage/page_io.cpp
         src/storage/serializer.cpp
         src/storage/storage_manager.cpp
+        src/query/executor.cpp
+        src/query/query_runner.cpp
         ${FLEX_Lexer_OUTPUTS}
         ${BISON_Parser_OUTPUTS}
 )
